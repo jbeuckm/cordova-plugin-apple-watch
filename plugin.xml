@@ -14,15 +14,24 @@
     <js-module name="AppleWatch" src="www/applewatch.js">
         <clobbers target="applewatch"/>
     </js-module>
+    <js-module name="MMWormhole" src="www/mmwormhole.js">
+        <clobbers target="mmwormhole"/>
+    </js-module>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="AppleWatch">
                 <param name="ios-package" value="AppleWatch"/>
                 <param name="onload" value="true"/>
             </feature>
+            <feature name="CordovaMMWormhole">
+                <param name="ios-package" value="CordovaMMWormhole"/>
+                <param name="onload" value="true"/>
+            </feature>
         </config-file>
         <header-file src="src/ios/AppleWatch.h"/>
         <source-file src="src/ios/AppleWatch.m"/>
+        <header-file src="src/ios/CordovaMMWormhole.h"/>
+        <source-file src="src/ios/CordovaMMWormhole.m"/>
         <header-file src="src/ios/MMWormhole.h"/>
         <source-file src="src/ios/MMWormhole.m"/>
         <header-file src="src/ios/MMWormholeCoordinatedFileTransiting.h"/>
